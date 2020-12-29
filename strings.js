@@ -1,11 +1,11 @@
 const string2InString1 = () => {
   const arr = [];
-  const inputString1 = prompt("Input string 1");
+  let inputString1 = prompt("Input string 1");
   if (inputString1 === null) {
     alert("Aborted");
     return;
   }
-  const inputString2 = prompt("Input Number2");
+  let inputString2 = prompt("Input Number2");
   if (inputString2 === null) {
     alert("Aborted");
     return;
