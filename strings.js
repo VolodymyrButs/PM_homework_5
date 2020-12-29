@@ -11,7 +11,7 @@ const string2InString1 = () => {
     return;
   }
   const workWithString = (string1, string2) => {
-    const plug = string2 === '"' ? "'" : '"';
+    let plug = string2 === '"' ? "'" : '"';
     if (string1.includes(string2) == false) {
       arr.length === 0
         ? console.log("no matches")
@@ -21,7 +21,7 @@ const string2InString1 = () => {
       return;
     } else {
       arr.push(string1.indexOf(string2) + 1);
-      string = string1.replace(string2, plug.repeat(string2.length));
+      let string = string1.replace(string2, plug.repeat(string2.length));
       return workWithString(string, string2);
     }
   };
