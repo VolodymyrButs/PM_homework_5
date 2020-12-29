@@ -19,13 +19,20 @@ const between = () => {
             console.log("No between");
             return;
           }
+          if (number2 - number1 > 1000) {
+            console.log("It`s to much input another numbers with less delta");
+            return;
+          }
           for (let i = number1 + 1; i < number2; i++) {
             console.log(i);
           }
         } else {
-          console.log(number2, number1);
           if (number1 - number2 <= 1) {
             console.log("No between");
+            return;
+          }
+          if (number1 - number2 > 1000) {
+            console.log("It`s to much input another numbers with less delta");
             return;
           }
           for (let i = number2 + 1; i < number1; i++) {
