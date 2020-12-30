@@ -9,7 +9,17 @@ const myPhoneFormat = /(\+?\s?(38)?[-\s]?\(?((067)|(068)|(096)|(097)|(098)|(050)
 const findScriptTags = /<script.*?>(.*?\n)*?.*?<\/script>/g;
 const findH1Tags = /<\/?h1.*?>/gi;
 
+const body = document.body.outerHTML;
+const head = document.head.outerHTML;
+
 const changeH1toH2 = () => {
-  const allH1 = document.body.outerHTML;
-  document.body.outerHTML = allH1.replace(/(<\/?h)1/gi, "$12");
+  document.body.outerHTML = body.replace(/(<\/?h)1/gi, "$12");
+};
+
+const findHex = () => {
+  console.log(body.match(HEXcolor).concat(head.match(HEXcolor)));
+};
+
+const findPhones = () => {
+  console.log(body.match(phoneFromFile));
 };
